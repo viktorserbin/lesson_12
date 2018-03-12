@@ -13,10 +13,8 @@ if (isset($_COOKIE['colour'])){
 if (isset($_POST)){
     if (isset($_POST['colour'])){
         $colour = $_POST['colour'];
-        if (!isset($_COOKIE['colour'])){
-            setcookie('colour', $colour,time()+7200);
-        }
-        $_COOKIE['colour']=$colour;
+        setcookie('colour', $colour,time()+7200);
+
     }
 }
 echo <<<EOD
